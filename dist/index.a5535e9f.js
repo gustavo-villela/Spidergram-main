@@ -644,10 +644,10 @@ document.addEventListener("DOMContentLoaded", displayImages);
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>fetchImages);
-let API_URL = "https://spidergram-back-636637281816.southamerica-east1.run.app";
+let API_URL = "http://localhost:3000/posts";
 async function fetchImages() {
     try {
-        const response = await fetch("https://spidergram-back-636637281816.southamerica-east1.run.app"); // Usando a URL importada
+        const response = await fetch("http://localhost:3000/posts"); // Usando a URL importada
         const data = await response.json();
         return data;
     } catch (error) {
